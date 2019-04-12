@@ -1,5 +1,5 @@
 .container {
-  max-width: 750px;
+  max-width: 10rem;
   height: 100vh;
   margin: 0 auto;
   background-color: red
