@@ -2,5 +2,85 @@
   max-width: 10rem;
   height: 100vh;
   margin: 0 auto;
-  background-color: red
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #f8f8ff;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 导航栏 */
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 1.33rem;
+  margin: 0 auto;
+  background-color: #fc3a37;
+  box-shadow: 0 1px 1px fc3a37;
+}
+
+.nav .item {
+  flex: 1;
+  height: 1.33rem;
+  line-height: 1.33rem;
+  font-size: .35rem;
+  text-align: center;
+  color: #fff;
+}
+
+.nav .active {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+
+/* 弹窗 */
+.dialog {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  right: 0;
+  display: none;
+  width: 8rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.dialog-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.33rem;
+  font-size: .5rem;
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #fc3a37;
+}
+
+.dialog-header .del {
+  position: absolute;
+  top: .33rem;
+  right: .27rem;
+  width: .61rem;
+  height: .61rem;
+
+}
+
+.dialog.show {
+  display: block;
+}
+
+.main {
+  margin-top: 1.07rem;
 }

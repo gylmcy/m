@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta content="maximum-dpr=2" name="flexible" />
+  <link rel="stylesheet" href="./common/css/reset.css">
+  <link rel="stylesheet" href="./common/css/main.css">
+  <link rel="stylesheet" href="./common/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="./common/css/gylm.css">
+  <!-- <script src="./common/js/flexible.js"></script> -->
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <title>手机</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部导航 -->
+    <div class="nav">
+      <div onclick="toScrollIntoView('page1')" class="item active">菜单1</div>
+      <div onclick="toScrollIntoView('page2')" class="item">菜单2</div>
+      <div onclick="toScrollIntoView('page3')" class="item c">菜单3</div>
+      <div onclick="showDialog()" class="item">创业</div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="main">
+      <div class="page page1" id="page1">1</div>
+      <div class="page page2" id="page2">2</div>
+      <div class="page page3" id="page3">3</div>
+    </div>
+    <div class="dialog">
+      <div class="dialog-header">
+        欢迎注册
+        <img class="del" onclick="closeDialog()" src="./common//images/del.png" alt="">
+      </div>
+    </div>
+  </div>
+  <script src="./common/js/jq.js"></script>
+  <script src="./common/js/main.js"></script>
+  <script src="./common/swiper/js/swiper.min.js"></script>
+
+</body>
+
+</html>
