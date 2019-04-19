@@ -15,8 +15,7 @@
   <link rel="stylesheet" href="./common/css/main.css">
   <link rel="stylesheet" href="./common/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="./common/css/gylm.css">
-  <!-- <script src="./common/js/flexible.js"></script> -->
-  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <script src="./common/js/flexible.js"></script>
   <title>手机</title>
 </head>
 
@@ -27,11 +26,18 @@
       <div onclick="toScrollIntoView('page1')" class="item active">菜单1</div>
       <div onclick="toScrollIntoView('page2')" class="item">菜单2</div>
       <div onclick="toScrollIntoView('page3')" class="item c">菜单3</div>
-      <div onclick="showDialog()" class="item">创业</div>
+      <div onclick="showDialog()" class="item">菜单4</div>
     </div>
+
     <!-- 主体内容 -->
     <div class="main">
-      <div class="page page1" id="page1">1</div>
+      <div class="page page1" id="page1">
+        <!-- 弹幕 -->
+        <section class="layer_barrage j_barrage ">
+          <ul>
+          </ul>
+        </section>
+      </div>
       <div class="page page2" id="page2">2</div>
       <div class="page page3" id="page3">3</div>
     </div>
@@ -42,10 +48,83 @@
       </div>
     </div>
   </div>
+  <script src="./common/js/vue.js"></script>
   <script src="./common/js/jq.js"></script>
   <script src="./common/js/main.js"></script>
+  <script src="./common/js/barrage.js"></script>
   <script src="./common/swiper/js/swiper.min.js"></script>
-
+  <script>
+    new Vue({
+      el: '.container',
+      data() {
+        return {
+          aqueue: [{
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '【夸雷斯马】，接我空翻360度接转体720度的双膝跪地！'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '空耳好评'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '无畏的事情'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '金钟大不是我男人吗，哦，坂本也是(｢･ω･)｢嘿'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '扳本OS：送上来的装逼机会啊！'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '女主我只认8823'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '牛顿不会诈尸，不要胡说，坂本做得都是有物理原理的可以实现'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '又换发了'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '葡萄牙必胜！'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '盲降成功'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '可怜你赢不过坂本大佬'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '关键是他不仅不穿衣服，而且居然还不换胖次ヾ(｡｀Д´｡)ﾉ彡'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '辣眼睛啊喂'
+            },
+            {
+              'img': 'http://tva1.sinaimg.cn/default/images/default_avatar_male_50.gif',
+              'content': '我们未能穿透敌人的装甲'
+            }
+          ]
+        }
+      },
+      mounted() {
+        // console.log(Barrage);
+        Barrage.danMuInit(this.aqueue)
+        // console.log(this.aqueue);
+        // Barrage.danMuInit(this.aqueue);
+      },
+    })
+  </script>
 </body>
 
 </html>

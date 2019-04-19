@@ -3,7 +3,13 @@
 }
 
 .page1 {
+  position: relative;
   background-color: blue;
+}
+
+.layer_barrage {
+  position: absolute;
+  top: 10px;
 }
 
 .page2 {
